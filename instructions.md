@@ -9,12 +9,17 @@ A Hero has health
 A Hero has a favourite food
 A Hero can talk saying their name
 A Hero has a collection of tasks to complete
+
+
 B. Create a constructor to create Task objects
 
 A task has a difficulty level
 A task has an urgency level
 A task has a reward
 A task should be able to be marked as completed
+
+
+
 C. Create a constructor to create Food objects.
 
 Food should have a name
