@@ -24,6 +24,8 @@ C. Create a constructor to create Food objects.
 
 Food should have a name
 Food should have a replenishment value
+
+
 D. Extend your hero.
 
 A hero should be able to eat food, and health should go up by the replenishment value
