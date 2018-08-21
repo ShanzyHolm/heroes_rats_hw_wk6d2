@@ -15,5 +15,14 @@ Hero.prototype.sayName = function() {
   return `${this.name} is here to save the day!`
 }
 
+// A Hero has a collection of tasks to complete
+Hero.prototype.numberOfTasks = function() {
+  return this.tasks.length;
+}
+
+Hero.prototype.addTask = function(task) {
+  this.tasks.push(task)
+}
+
 
 module.exports = Hero;

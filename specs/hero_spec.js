@@ -38,4 +38,30 @@ describe("Hero", function() {
     assert.strictEqual(actual, "He-Man is here to save the day!")
   });
 
+  it("should have a collection of tasks to complete", function(){
+    // arrange
+    // act
+    const actual = hero.tasks;
+    // assert
+    assert.deepStrictEqual(actual, [])
+  });
+
+  it("should get the number of tasks to complete", function(){
+    // arrange
+    // act
+    const actual = hero.numberOfTasks();
+    // assert
+    assert.strictEqual(actual, 0)
+  });
+
+  it("should add a task to collection", function(){
+    // arrange
+    hero.addTask("transform")
+    // act
+    const actual = hero.numberOfTasks();
+    // assert
+    assert.strictEqual(actual, 1)
+  });
+
+
 });
