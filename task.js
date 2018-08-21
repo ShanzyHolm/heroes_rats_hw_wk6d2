@@ -4,5 +4,8 @@ const Task = function(name, difficulty, urgency, reward) {
   this.urgency = urgency;
   this.reward = reward;
 }
+// 
+// difficulty = ["easy", "moderate", "challenging", "demanding", "strenuous"]
+// urgency = ["low", "medium", "high", "critical"]
 
 module.exports = Task;
