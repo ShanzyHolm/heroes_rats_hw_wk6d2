@@ -30,5 +30,12 @@ describe("Hero", function() {
     assert.strictEqual(actual, "apples")
   });
 
+  it("should say their name", function(){
+    // arrange
+    // act
+    const actual = hero.sayName();
+    // assert
+    assert.strictEqual(actual, "He-Man is here to save the day!")
+  });
 
 });
