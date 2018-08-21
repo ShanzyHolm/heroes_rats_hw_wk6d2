@@ -3,7 +3,7 @@ const Hero = require("../hero.js")
 
 describe("Hero", function() {
   beforeEach(function(){
-    hero = new Hero ("He-Man");
+    hero = new Hero ("He-Man", "apples");
   });
 
   it("should have a name", function(){
@@ -17,25 +17,10 @@ describe("Hero", function() {
   it("should have health", function(){
     // arrange
     // act
+    const actual = hero.health;
     // assert
+    assert.strictEqual(actual, 100)
   });
 
-  it("should have a favourite food", function(){
-    // arrange
-    // act
-    // assert
-  });
-
-  it("should say their name", function(){
-    // arrange
-    // act
-    // assert
-  });
-
-  it("should have a collection of tasks to complete", function(){
-    // arrange
-    // act
-    // assert
-  });
 
 });
