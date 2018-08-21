@@ -22,5 +22,13 @@ describe("Hero", function() {
     assert.strictEqual(actual, 100)
   });
 
+  it("should have a favourite food", function(){
+    // arrange
+    // act
+    const actual = hero.favouriteFood;
+    // assert
+    assert.strictEqual(actual, "apples")
+  });
+
 
 });
