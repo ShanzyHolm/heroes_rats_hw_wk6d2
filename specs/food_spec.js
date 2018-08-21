@@ -4,7 +4,7 @@ const Hero = require("../hero.js")
 
 describe("Food", function(){
   beforeEach(function(){
-    food = new Food("apples");
+    food = new Food("apples", 10);
   });
 
   it("should have a name", function(){
@@ -15,10 +15,19 @@ describe("Food", function(){
     assert.strictEqual(actual, "apples");
   });
 
-  xit("should have a replenishment value", function(){
+  it("should have a replenishment value", function(){
     // arrange
     // act
+    const actual = food.replenishment;
     // assert
+    assert.strictEqual(actual, 10);
   });
+
+  // xit("should add replenishment value", function(){
+  //   // arrange
+  //   // act
+  //
+  //   // assert
+  // });
 
 })
