@@ -3,7 +3,7 @@ const Task = require("../task.js")
 
 describe("Task", function(){
   beforeEach(function(){
-    task = new Task("transform", "easy", "critical", "5 points")
+    task = new Task("transform", "easy", "critical", "5 points", "completed")
   });
 
   it("should have a name", function(){
@@ -38,9 +38,11 @@ describe("Task", function(){
     assert.strictEqual(actual, "5 points")
   });
 
-  xit("should be able to be marked as completed", function(){
+  it("should be able to be marked as completed", function(){
     // arrange
     // act
+    const actual = task.isCompleted();
     // assert
+    assert.strictEqual(actual, "That's one thing completed!")
   });
 })
