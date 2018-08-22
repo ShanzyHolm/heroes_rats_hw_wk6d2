@@ -63,5 +63,13 @@ describe("Hero", function() {
     assert.strictEqual(actual, 1)
   });
 
+  it("should be able to eat food", function(){
+    // arrange
+    // act
+    const actual = hero.eatFood(hero.favouriteFood);
+    //assert
+    assert.strictEqual(actual, "Crunch, crunch, apples are delicious!")
+  });
+
 
 });

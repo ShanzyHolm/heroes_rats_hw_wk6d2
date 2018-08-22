@@ -21,7 +21,11 @@ Hero.prototype.numberOfTasks = function() {
 }
 
 Hero.prototype.addTask = function(task) {
-  this.tasks.push(task)
+  this.tasks.push(task);
+}
+
+Hero.prototype.eatFood = function(food) {
+  return `Crunch, crunch, ${this.favouriteFood} are delicious!`;
 }
 
 
