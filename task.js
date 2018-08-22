@@ -7,8 +7,8 @@ const Task = function(name, difficulty, urgency, reward, completed) {
 }
 
 Task.prototype.isCompleted = function() {
-  if (task.completed === "completed") {
-    return `That's one thing ${task.completed}!`
+  if (this.completed === "completed") {
+    return `That's one thing ${this.completed}!`
   }
   else {
     return `not completed`
@@ -24,8 +24,17 @@ Task.prototype.isCompleted = function() {
   // };
 // }
 
+//// const difficulty = {
+//   "easy" => 1,
+//   "moderate" => 2,
+//   "challenging" => 3,
+//   "demanding" => 4,
+//   "strenuous" => 5
+// }
 //
-// difficulty = ["easy", "moderate", "challenging", "demanding", "strenuous"]
 // urgency = ["low", "medium", "high", "critical"]
 
+
 module.exports = Task;
+// difficulty = ["easy", "moderate", "challenging", "demanding", "strenuous"]
+// urgency = ["low", "medium", "high", "critical"]

@@ -38,6 +38,8 @@ Extension
 Create a constructor to create Rat objects.
 Rats should be able to touch food, if they do the food becomes poisonous.
 Heroes that eat poisonous food should lose health.
+
+
 Further
 Be creative. Extend the game! Give the hero super powers.
 

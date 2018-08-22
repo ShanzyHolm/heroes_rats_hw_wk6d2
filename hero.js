@@ -25,13 +25,22 @@ Hero.prototype.addTask = function(task) {
 }
 
 Hero.prototype.eatFood = function(food) {
-  return this.health += food.replenishment
+  if (this.favouriteFood == food.name) {
+    this.health += food.replenishment * 1.5;
+  }
+  else {
+    this.health += food.replenishment;
+  }
 }
 
-Hero.prototype.eatFavouriteFood = function(food) {
-  favFoodReplenish = food.replenishment * 1.5
-  return this.health += favFoodReplenish
-}
+// Hero.prototype.eatFood = function(food) {
+//   return this.health += food.replenishment
+// }
+//
+// Hero.prototype.eatFavouriteFood = function(food) {
+//   favFoodReplenish = food.replenishment * 1.5
+//   return this.health += favFoodReplenish
+// }
 //
 // Hero.prototype.eatFood = function(food) {
 //   return this.health += food.replenishment
