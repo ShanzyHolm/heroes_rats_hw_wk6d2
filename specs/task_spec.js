@@ -1,5 +1,5 @@
 const assert = require("assert");
-const Task = require("../task.js")
+const Task = require("../task.js");
 
 describe("Task", function(){
   beforeEach(function(){

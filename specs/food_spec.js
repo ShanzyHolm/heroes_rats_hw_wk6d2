@@ -1,6 +1,5 @@
 const assert = require("assert");
-const Food = require("../food.js")
-const Hero = require("../hero.js")
+const Food = require("../food.js");
 
 describe("Food", function(){
   beforeEach(function(){
@@ -22,12 +21,5 @@ describe("Food", function(){
     // assert
     assert.strictEqual(actual, 10);
   });
-
-  // xit("should add replenishment value", function(){
-  //   // arrange
-  //   // act
-  //
-  //   // assert
-  // });
 
 })
