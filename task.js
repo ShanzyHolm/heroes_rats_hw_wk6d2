@@ -9,7 +9,10 @@ const Task = function(name, difficulty, urgency, reward, completed) {
 Task.prototype.isCompleted = function() {
   if (task.completed === "completed") {
     return `That's one thing ${task.completed}!`
-  };
+  }
+  else {
+    return `not completed`
+  }
 }
 
 // Task.prototype.isCompleted = function() {

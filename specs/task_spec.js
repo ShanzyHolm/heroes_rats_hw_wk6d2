@@ -45,4 +45,13 @@ describe("Task", function(){
     // assert
     assert.strictEqual(actual, "That's one thing completed!")
   });
+
+  it("should be able to be marked as not completed", function(){
+    // arrange
+    task = new Task("Battle Cat attack", "moderate", "medium", "5 points", "not completed")
+    // act
+    const actual = task.isCompleted();
+    // assert
+    assert.strictEqual(actual, "not completed")
+  });
 })

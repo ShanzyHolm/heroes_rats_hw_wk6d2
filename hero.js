@@ -25,8 +25,17 @@ Hero.prototype.addTask = function(task) {
 }
 
 Hero.prototype.eatFood = function(food) {
-  return `Crunch, crunch, ${this.favouriteFood} are delicious!`;
+  return this.health += food.replenishment
 }
 
+// pseudocode
+// hero takes in a food to eat
+// eaten food needs to return replenishment
+// replenishment is ADDED to hero health
+//
+
+// Hero.prototype.eatFood = function(food) {
+//   return `Crunch, crunch, ${this.favouriteFood} are delicious!`;
+// }
 
 module.exports = Hero;

@@ -3,4 +3,8 @@ const Food = function(name, replenishment) {
   this.replenishment = replenishment;
 }
 
+Food.prototype.eat = function(food, replenishment) {
+  return this.replenishment;
+}
+
 module.exports = Food;

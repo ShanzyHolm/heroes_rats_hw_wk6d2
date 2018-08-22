@@ -1,5 +1,6 @@
 const assert = require("assert")
 const Hero = require("../hero.js")
+const Food = require("../food.js");
 
 describe("Hero", function() {
   beforeEach(function(){
@@ -65,10 +66,13 @@ describe("Hero", function() {
 
   it("should be able to eat food", function(){
     // arrange
+    const food = new Food("bananas", 5)
+    hero.eatFood(food)
     // act
-    const actual = hero.eatFood(hero.favouriteFood);
+    const actual = hero.health;
     //assert
-    assert.strictEqual(actual, "Crunch, crunch, apples are delicious!")
+    // assert.strictEqual(actual, "Crunch, crunch, apples are delicious!")
+    assert.strictEqual(actual, 105)
   });
 
 
