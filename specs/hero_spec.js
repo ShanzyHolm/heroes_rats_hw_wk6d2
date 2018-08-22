@@ -1,6 +1,7 @@
 const assert = require("assert");
 const Hero = require("../hero.js");
 const Food = require("../food.js");
+const Task = require("../task.js");
 
 let hero;
 
@@ -102,8 +103,17 @@ describe("Hero", function() {
   describe("Hero and Tasks", function(){
     xit("view tasks marked as complete", function(){
       // arrange
+      let task1 = new Task("transform", 1, "critical", "5 points", "completed");
+      let task2 = new Task("Battle Cat attack", 5, "medium", "20 points", "not completed");
+      let task3 = new Task("swing sword", 3, "high", "15 points", "completed");
+
       // act
+      hero.addTask(task1);
+      hero.addTask(task2);
+      hero.addTask(task3);
+      const actual = hero.getCompleteTasks();
       // assert
+      assert.deepStrictEqual(actual, [task1, task3])
     });
 
     xit("view tasks marked as not complete", function(){
@@ -112,27 +122,57 @@ describe("Hero", function() {
       // assert
     });
 
-    xit("should be able to sort tasks by difficulty", function(){
+    it("should be able to sort tasks by difficulty", function(){
       // arrange
+      let task1 = new Task("transform", 1, "critical", "5 points", "completed");
+      let task2 = new Task("Battle Cat attack", 5, "medium", "20 points", "not completed");
+      let task3 = new Task("swing sword", 3, "high", "15 points", "completed");
+
       // act
+      hero.addTask(task1);
+      hero.addTask(task2);
+      hero.addTask(task3);
+      hero.sortTasks("difficulty");
       // assert
+      assert.deepStrictEqual(hero.tasks, [task1, task3, task2])
     });
 
-    xit("should be able to sort tasks by urgency", function(){
+    it("should be able to sort tasks by urgency", function(){
       // arrange
+      let task1 = new Task("transform", "easy", 4, "5 points", "completed");
+      let task2 = new Task("Battle Cat attack", "critical", 2, "20 points", "not completed");
+      let task3 = new Task("swing sword", "medium", 3, "15 points", "completed");
+
       // act
+      hero.addTask(task1);
+      hero.addTask(task2);
+      hero.addTask(task3);
+      hero.sortTasks("urgency");
       // assert
+      assert.deepStrictEqual(hero.tasks, [task2, task3, task1])
     });
 
-    xit("should be able to sort tasks by reward", function(){
+    it("should be able to sort tasks by reward", function(){
       // arrange
-      hero.addTask("transform", "easy", "critical", "5 points", "completed");
-      hero.addTask("Battle Cat attack", "moderate", "medium", "20 points", "not completed")
-      hero.addTask("swing sword", "challenging", "high", "15 points", "completed")
+      let task1 = new Task("transform", "easy", "critical", 5, "completed");
+      let task2 = new Task("Battle Cat attack", "critical", "medium", 20, "not completed");
+      let task3 = new Task("swing sword", "medium", "high", 15, "completed");
+
       // act
+      hero.addTask(task1);
+      hero.addTask(task2);
+      hero.addTask(task3);
+      hero.sortTasks("reward");
       // assert
+      assert.deepStrictEqual(hero.tasks, [task1, task3, task2])
     });
   });
 
 
 });
+
+// xit("should be able to sort tasks by reward", function(){
+//   // arrange
+//   // act
+//   // assert
+// });

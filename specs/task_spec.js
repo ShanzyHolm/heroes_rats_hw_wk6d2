@@ -45,7 +45,7 @@ describe("Task", function(){
     // act
     const actual = task.isCompleted();
     // assert
-    assert.strictEqual(actual, "That's one thing completed!")
+    assert.strictEqual(actual, true)
   });
 
   it("should be able to be marked as not completed", function(){
@@ -54,7 +54,7 @@ describe("Task", function(){
     // act
     const actual = task.isCompleted();
     // assert
-    assert.strictEqual(actual, "not completed")
+    assert.strictEqual(actual, false)
   });
 
 })

@@ -25,13 +25,39 @@ Hero.prototype.addTask = function(task) {
 }
 
 Hero.prototype.eatFood = function(food) {
-  if (this.favouriteFood == food.name) {
+  if (this.favouriteFood === food.name) {
     this.health += food.replenishment * 1.5;
   }
   else {
     this.health += food.replenishment;
   }
 }
+
+Hero.prototype.sortTasks = function(property){
+  this.tasks.sort(function(a, b) {
+    return a[property] - b[property];
+  });
+}
+// ascending order
+//
+// Hero.prototype.sortTasks = function(property){
+//   this.tasks.sort(function(a, b) {
+//     return b[property] - a[property];
+//   });
+// }
+// descending order
+
+// Hero.prototype.sortTasks - function(property){
+//   this.tasks.sort(function(a, b) {
+//     return a.difficulty - b.difficulty;
+//   });
+// }
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+Hero.prototype.getCompleteTasks = function(){
+  return this.tasks.filter(task => task.isCompleted)
+}
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 // Hero.prototype.eatFood = function(food) {
 //   return this.health += food.replenishment

@@ -8,10 +8,10 @@ const Task = function(name, difficulty, urgency, reward, completed) {
 
 Task.prototype.isCompleted = function() {
   if (this.completed === "completed") {
-    return `That's one thing ${this.completed}!`
+    return true
   }
   else {
-    return `not completed`
+    return false
   }
 }
 
