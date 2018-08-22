@@ -75,5 +75,15 @@ describe("Hero", function() {
     assert.strictEqual(actual, 105)
   });
 
+  it("should have health increase *1.5 value if eaten favourite food", function(){
+    // arrange
+    const food = new Food("apples", 10)
+    hero.eatFavouriteFood(food)
+    // act
+    const actual = hero.health;
+    //assert
+    assert.strictEqual(actual, 115)
+  });
+
 
 });
