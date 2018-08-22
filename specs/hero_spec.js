@@ -1,5 +1,5 @@
-const assert = require("assert")
-const Hero = require("../hero.js")
+const assert = require("assert");
+const Hero = require("../hero.js");
 const Food = require("../food.js");
 
 describe("Hero", function() {
