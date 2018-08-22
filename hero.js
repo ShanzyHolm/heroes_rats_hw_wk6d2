@@ -25,7 +25,10 @@ Hero.prototype.addTask = function(task) {
 }
 
 Hero.prototype.eatFood = function(food) {
-  if (this.favouriteFood === food.name) {
+  if(food.isPoisonous){
+    this.health -= food.replenishment;
+  }
+  else if (this.favouriteFood === food.name) {
     this.health += food.replenishment * 1.5;
   }
   else {

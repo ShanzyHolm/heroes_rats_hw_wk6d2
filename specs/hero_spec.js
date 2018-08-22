@@ -2,6 +2,7 @@ const assert = require("assert");
 const Hero = require("../hero.js");
 const Food = require("../food.js");
 const Task = require("../task.js");
+const Rat = require("../rat.js");
 
 let hero;
 
@@ -98,12 +99,20 @@ describe("Hero", function() {
     //   //assert
     //   assert.strictEqual(actual, 115)
     // });
+
+    it("health should go down if food is poisoned", function(){
+      let food = new Food("Cheese", 10);
+      let rat = new Rat("Roland");
+      rat.touchFood(food);
+      hero.eatFood(food);
+      assert.strictEqual(hero.health, 90)
+    });
   });
 
   describe("Hero and Tasks", function(){
-    xit("view tasks marked as complete", function(){
+    it("view tasks marked as complete", function(){
       // arrange
-      let task1 = new Task("transform", 1, "critical", "5 points", "completed");
+      let task1 = new Task("transform", 1, "critical", "5 points", "not completed");
       let task2 = new Task("Battle Cat attack", 5, "medium", "20 points", "not completed");
       let task3 = new Task("swing sword", 3, "high", "15 points", "completed");
 
@@ -111,9 +120,9 @@ describe("Hero", function() {
       hero.addTask(task1);
       hero.addTask(task2);
       hero.addTask(task3);
-      const actual = hero.getCompleteTasks();
+      // const actual = hero.getCompleteTasks();
       // assert
-      assert.deepStrictEqual(actual, [task1, task3])
+      assert.deepStrictEqual(task.isCompleted(), [task3])
     });
 
     xit("view tasks marked as not complete", function(){
@@ -167,7 +176,6 @@ describe("Hero", function() {
       assert.deepStrictEqual(hero.tasks, [task1, task3, task2])
     });
   });
-
 
 });
 
