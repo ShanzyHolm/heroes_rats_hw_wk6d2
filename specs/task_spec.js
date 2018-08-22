@@ -54,4 +54,33 @@ describe("Task", function(){
     // assert
     assert.strictEqual(actual, "not completed")
   });
+
+  xit("should be able to sort tasks by difficulty", function(){
+    // arrange
+    task = new Task("transform", "easy", "critical", "5 points", "completed");
+    task = new Task("Battle Cat attack", "moderate", "medium", "20 points", "not completed")
+    task = new Task("swing sword", "challenging", "high", "15 points", "completed")
+    // act
+
+    // assert
+  });
+
+  xit("should be able to sort tasks by urgency", function(){
+    // arrange
+    task = new Task("transform", "easy", "critical", "5 points", "completed");
+    task = new Task("Battle Cat attack", "moderate", "medium", "20 points", "not completed")
+    task = new Task("swing sword", "challenging", "high", "15 points", "completed")
+    // act
+    // assert
+  });
+
+  xit("should be able to sort tasks by reward", function(){
+    // arrange
+    task = new Task("transform", "easy", "critical", "5 points", "completed");
+    task = new Task("Battle Cat attack", "moderate", "medium", "20 points", "not completed")
+    task = new Task("swing sword", "challenging", "high", "15 points", "completed")
+    // act
+    // assert
+  });
+
 })
